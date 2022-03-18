@@ -17,7 +17,31 @@ const routes = [
     path: '/men/:id',
     name: 'Output',
     component: () => import('../views/Output.vue')
-  }
+  },
+
+  {
+    path: '/women',
+    name: 'Women',
+    component: () => import('../views/Women.vue')
+  },
+
+  // {
+  //   path: '/women/:id',
+  //   name: 'Women',
+  //   component: () => import('../views/Women.vue')
+  // },
+
+  {
+    path: '/kids',
+    name: 'Kids',
+    component: () => import('../views/Kids.vue')
+  },
+
+  // {
+  //   path: '/kids/:id',
+  //   name: 'Kids',
+  //   component: () => import('../views/Kids.vue')
+  // }
 
 
 ]
