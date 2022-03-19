@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import data from "@/assets/data.json"
+import data from "@/assets/women.json"
 export default {
     data() {
         return {

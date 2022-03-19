@@ -25,11 +25,11 @@ const routes = [
     component: () => import('../views/Women.vue')
   },
 
-  // {
-  //   path: '/women/:id',
-  //   name: 'Women',
-  //   component: () => import('../views/Women.vue')
-  // },
+  {
+    path: '/women/:id',
+    name: 'wOutput',
+    component: () => import('../views/wOutput.vue')
+  },
 
   {
     path: '/kids',
@@ -37,11 +37,11 @@ const routes = [
     component: () => import('../views/Kids.vue')
   },
 
-  // {
-  //   path: '/kids/:id',
-  //   name: 'Kids',
-  //   component: () => import('../views/Kids.vue')
-  // }
+  {
+    path: '/kids/:id',
+    name: 'kOutput',
+    component: () => import('../views/kOutput.vue')
+  }
 
 
 ]
