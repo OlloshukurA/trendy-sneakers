@@ -2,7 +2,11 @@
   <div class="nav">
       <Nav/>
   </div>
-  <router-view/>
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 </template>
 
 <style lang="scss">
@@ -23,6 +27,17 @@
 *{
   font-family: 'Roboto', sans-serif;
 }
+
+.fade-enter-active,
+.fade-leave-active{
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-active{
+  opacity: 0;
+}
+
 </style>
 
 

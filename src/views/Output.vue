@@ -1,5 +1,6 @@
 <template>
-  <button class=" bg-black text-white px-4 py-2 mx-5 mt-5 rounded-sm" @click="$router.back()">Back</button>
+<div>
+    <button class=" bg-black text-white px-4 py-2 mx-5 mt-5 rounded-sm" @click="$router.back()">Back</button>
   <div class="home px-5 mt-10 grid grid-cols-1 ">
    <div> <img :src="post.img_url" alt="" class=" w-full h-96 rounded">
 
@@ -22,7 +23,7 @@
       </div>
 
       <div class=" flex justify-between items-start flex-col mb-4">
-        <button class=" flex items-center border border-green-500 w-48 rounded-sm pl-2 font-medium bg-green-500 shadow-sm mt-4 mb-2 "><ShoppingBagIcon class="w-5 h-5 mr-2 text-white"/>ADD TO BAG</button>
+        <button class=" flex items-center border border-green-500 w-48 rounded-sm pl-2 font-medium bg-green-500 shadow-sm mt-4 mb-2" @click="like++"><ShoppingBagIcon class="w-5 h-5 mr-2 text-white"/>ADD TO BAG</button>
         <button class=" flex items-center border border-green-500 w-48 rounded-sm pl-2 font-medium bg-green-100 shadow-sm "><HeartIcon class="w-5 h-5 mr-2"/>WISHLIST</button>
       </div>
     </div>
@@ -86,6 +87,7 @@
 
    
   </div>
+</div>
 </template>
 
 <script>
@@ -93,6 +95,7 @@ import { StarIcon, ShoppingBagIcon, } from '@heroicons/vue/solid'
 import { HeartIcon } from '@heroicons/vue/outline'
 import data from '../assets/data.json'
 import men from '../assets/men.json'
+import likes from '../assets/likes.json'
 export default {
     computed: {
     postId(){
@@ -106,7 +109,8 @@ export default {
 
   data() {
     return {
-      posts: men
+      posts: men,
+      like: likes
     }
   },
 

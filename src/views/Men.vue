@@ -1,10 +1,12 @@
 <template>
-  <div class=" mt-10 px-10">
+  <div>
+    <div class=" mt-10 px-10">
     <h1 class="font-bold text-4xl">Men's style</h1>
 
    <div class=" w-full mt-10">
       <Products/>
    </div>
+  </div>
   </div>
 </template>
 

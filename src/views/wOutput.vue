@@ -1,5 +1,6 @@
 <template>
-  <button class=" bg-black text-white px-4 py-2 mx-5 mt-5 rounded-sm" @click="$router.back()">Back</button>
+<div>
+    <button class=" bg-black text-white px-4 py-2 mx-5 mt-5 rounded-sm" @click="$router.back()">Back</button>
   <div class="home px-5 mt-10 grid grid-cols-1 ">
    <div> <img :src="post.img_url" alt="" class=" w-full h-96 rounded">
 
@@ -86,6 +87,7 @@
 
    
   </div>
+</div>
 </template>
 
 <script>
